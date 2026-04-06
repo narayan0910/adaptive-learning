@@ -1,0 +1,68 @@
+[
+  {
+    "id": "transparent",
+    "name": "Transparent, Translucent & Opaque",
+    "shortName": "Light & Materials",
+    "prerequisites": [],
+    "order": 1,
+    "emoji": "🔮",
+    "color": "#4FC3F7",
+    "bgColor": "#E1F5FE",
+    "description": "How light passes through different materials"
+  },
+  {
+    "id": "shadows",
+    "name": "How Shadows Are Formed",
+    "shortName": "Shadow Formation",
+    "prerequisites": ["transparent"],
+    "order": 2,
+    "emoji": "🌑",
+    "color": "#7E57C2",
+    "bgColor": "#EDE7F6",
+    "description": "Why objects cast shadows when light hits them"
+  },
+  {
+    "id": "shadow_properties",
+    "name": "Properties of Shadows",
+    "shortName": "Shadow Properties",
+    "prerequisites": ["shadows"],
+    "order": 3,
+    "emoji": "📐",
+    "color": "#FF7043",
+    "bgColor": "#FBE9E7",
+    "description": "Size, shape, and colour of shadows"
+  },
+  {
+    "id": "pinhole",
+    "name": "Pinhole Camera",
+    "shortName": "Pinhole Camera",
+    "prerequisites": ["shadows"],
+    "order": 4,
+    "emoji": "📷",
+    "color": "#26A69A",
+    "bgColor": "#E0F2F1",
+    "description": "How a tiny hole can form images"
+  },
+  {
+    "id": "reflection",
+    "name": "Reflection of Light",
+    "shortName": "Reflection",
+    "prerequisites": ["transparent"],
+    "order": 5,
+    "emoji": "🪞",
+    "color": "#EF5350",
+    "bgColor": "#FFEBEE",
+    "description": "How light bounces off surfaces"
+  },
+  {
+    "id": "day_night",
+    "name": "Day and Night",
+    "shortName": "Day & Night",
+    "prerequisites": ["shadows"],
+    "order": 6,
+    "emoji": "🌍",
+    "color": "#FFA726",
+    "bgColor": "#FFF3E0",
+    "description": "Why we have day and night on Earth"
+  }
+]
