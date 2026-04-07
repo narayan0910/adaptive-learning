@@ -1,0 +1,110 @@
+[
+  {
+    "id": "q1",
+    "conceptId": "transparent",
+    "question": "Riya is looking through a glass window at her school. She can see the playground clearly. What kind of material is the glass window?",
+    "options": ["Opaque", "Translucent", "Transparent", "Reflective"],
+    "correctIndex": 2,
+    "hint": "Think about how clearly you can see objects through this material.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q2",
+    "conceptId": "transparent",
+    "question": "Aman's mother puts a butter paper over a drawing to trace it. He can see the drawing but it's not very clear. The butter paper is:",
+    "options": ["Transparent", "Translucent", "Opaque", "Luminous"],
+    "correctIndex": 1,
+    "hint": "This material allows some light to pass through but scatters it.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q3",
+    "conceptId": "shadows",
+    "question": "Priya is playing in the school playground at noon. She notices her shadow is very short. What does this tell us about the position of the sun?",
+    "options": ["Sun is on the horizon", "Sun is directly overhead", "Sun is behind a cloud", "Sun has set"],
+    "correctIndex": 1,
+    "hint": "Think about which direction light is coming from when the shadow is directly under you.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q4",
+    "conceptId": "shadows",
+    "question": "Rohan holds a book in front of a torch in a dark room. A dark patch appears on the wall behind. What is this dark patch called?",
+    "options": ["Reflection", "Refraction", "Shadow", "Image"],
+    "correctIndex": 2,
+    "hint": "When light is blocked by an opaque object, a dark region forms behind it.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q5",
+    "conceptId": "shadow_properties",
+    "question": "Meena moves a ball closer to a torch in a dark room. What happens to the shadow of the ball on the wall?",
+    "options": ["It becomes smaller", "It stays the same", "It becomes larger", "It disappears"],
+    "correctIndex": 2,
+    "hint": "Think about what happens when the object is closer to the light source.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q6",
+    "conceptId": "shadow_properties",
+    "question": "Aman makes a shadow of his hand on the wall. The shadow is always black. This is because shadows show:",
+    "options": ["The colour of the object", "The colour of the light source", "Absence of light", "The colour of the wall"],
+    "correctIndex": 2,
+    "hint": "A shadow forms where light cannot reach.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q7",
+    "conceptId": "pinhole",
+    "question": "Sunita made a pinhole camera using a shoebox. When she points it at a candle, the image of the candle inside the box appears:",
+    "options": ["Upright and same size", "Upside down and inverted", "Sideways", "No image is formed"],
+    "correctIndex": 1,
+    "hint": "Light travels in straight lines through the tiny hole.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q8",
+    "conceptId": "pinhole",
+    "question": "Vikram makes a pinhole camera. If he makes the pinhole bigger, what happens to the image?",
+    "options": ["Image becomes clearer", "Image becomes blurry", "Image becomes brighter only", "Image disappears"],
+    "correctIndex": 1,
+    "hint": "A smaller hole allows only one set of rays from each point of the object.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "q9",
+    "conceptId": "reflection",
+    "question": "Kavya stands in front of a mirror. When she raises her right hand, which hand does her image raise?",
+    "options": ["Right hand", "Left hand", "Both hands", "Neither hand"],
+    "correctIndex": 1,
+    "hint": "Think about how a mirror reverses the image laterally.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q10",
+    "conceptId": "reflection",
+    "question": "Arjun's teacher says that the moon is not a source of its own light. How do we see the moon at night?",
+    "options": ["Moon produces its own light", "Moon absorbs sunlight and releases it", "Moon reflects sunlight towards Earth", "Moon is transparent"],
+    "correctIndex": 2,
+    "hint": "The moon acts like a mirror for sunlight.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "q11",
+    "conceptId": "day_night",
+    "question": "Deepa lives in Delhi. Her cousin lives in New York. When it is day in Delhi, what is it in New York?",
+    "options": ["Also day", "Night", "Evening always", "Morning always"],
+    "correctIndex": 1,
+    "hint": "Earth rotates and only one side faces the sun at a time.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "q12",
+    "conceptId": "day_night",
+    "question": "The Earth completes one full rotation on its axis in approximately:",
+    "options": ["12 hours", "24 hours", "365 days", "30 days"],
+    "correctIndex": 1,
+    "hint": "This is the same as the length of one full day.",
+    "difficulty": "medium"
+  }
+]

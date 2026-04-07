@@ -1,0 +1,266 @@
+{
+  "transparent": [
+    {
+      "id": "p_t1",
+      "conceptId": "transparent",
+      "question": "Riya's grandmother uses a frosted glass door for her bathroom. Why is frosted glass a good choice for this?",
+      "options": [
+        "Because it is transparent and people can see through",
+        "Because it is translucent — lets light in but blocks clear view",
+        "Because it is opaque and blocks all light",
+        "Because it is shiny and reflects light"
+      ],
+      "correctIndex": 1,
+      "hint": "Think about privacy and light at the same time.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "p_t2",
+      "conceptId": "transparent",
+      "question": "Which of these lists has ALL transparent objects?",
+      "options": [
+        "Glass window, clear water, air",
+        "Frosted glass, butter paper, thin cloth",
+        "Wood, metal sheet, thick book",
+        "Clear glass, butter paper, iron sheet"
+      ],
+      "correctIndex": 0,
+      "hint": "Transparent objects let you see through them completely clearly.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "p_t3",
+      "conceptId": "transparent",
+      "question": "Aman puts his hand behind a thick wooden plank and shines a torch from the front. What will happen?",
+      "options": [
+        "His hand will be visible through the plank",
+        "His hand will appear blurry through the plank",
+        "No light will pass through — his hand will not be visible",
+        "A rainbow will form"
+      ],
+      "correctIndex": 2,
+      "hint": "Wood is an opaque material.",
+      "difficulty": "easy"
+    }
+  ],
+  "shadows": [
+    {
+      "id": "p_s1",
+      "conceptId": "shadows",
+      "question": "Deepa holds a transparent glass in sunlight. Will it form a clear shadow on the ground?",
+      "options": [
+        "Yes, a very dark clear shadow",
+        "No, transparent objects don't block light so no clear shadow forms",
+        "Yes, but only at night",
+        "Only if the glass is coloured"
+      ],
+      "correctIndex": 1,
+      "hint": "Think about what a transparent object does with light.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "p_s2",
+      "conceptId": "shadows",
+      "question": "Three things are needed for a shadow to form. Which option has ALL three correctly?",
+      "options": [
+        "Mirror, object, water",
+        "Light source, opaque object, screen",
+        "Lens, colour, wall",
+        "Sun, window, camera"
+      ],
+      "correctIndex": 1,
+      "hint": "A shadow needs something to block the light, something to provide light, and somewhere to fall.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "p_s3",
+      "conceptId": "shadows",
+      "question": "Priya's shadow falls behind her as she walks towards the school gate. Where is the sun?",
+      "options": [
+        "Behind her (the sun is at her back)",
+        "In front of her",
+        "Directly above her head",
+        "Below the horizon"
+      ],
+      "correctIndex": 0,
+      "hint": "Shadows always fall on the opposite side from the light source.",
+      "difficulty": "easy"
+    }
+  ],
+  "shadow_properties": [
+    {
+      "id": "p_sp1",
+      "conceptId": "shadow_properties",
+      "question": "Meena uses a red torch and shines it on a blue ball. What colour will the shadow be?",
+      "options": [
+        "Red",
+        "Blue",
+        "Purple",
+        "Black"
+      ],
+      "correctIndex": 3,
+      "hint": "The colour of a shadow does not depend on the object or light colour.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "p_sp2",
+      "conceptId": "shadow_properties",
+      "question": "Rohan's shadow in the morning is very long. By afternoon it became very short. What caused this change?",
+      "options": [
+        "Rohan grew taller",
+        "The ground changed shape",
+        "The sun's position changed — it moved higher in the sky",
+        "The shadow moved on its own"
+      ],
+      "correctIndex": 2,
+      "hint": "Think about how the angle of the sun changes throughout the day.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "p_sp3",
+      "conceptId": "shadow_properties",
+      "question": "Arjun holds a circular coin in front of a torch. In which position will the shadow look like a straight line (not a circle)?",
+      "options": [
+        "When the coin faces the torch directly",
+        "When the coin is tilted sideways so its edge faces the torch",
+        "When the coin is placed flat on the ground",
+        "The shadow is always circular"
+      ],
+      "correctIndex": 1,
+      "hint": "Think about what the thin edge of a coin looks like.",
+      "difficulty": "hard"
+    }
+  ],
+  "pinhole": [
+    {
+      "id": "p_ph1",
+      "conceptId": "pinhole",
+      "question": "Kavya makes a pinhole camera and points it at a tree. Where will the image of the tree appear and how will it look?",
+      "options": [
+        "On the screen, upright and same size",
+        "On the screen, inverted (upside down)",
+        "On the pinhole side of the box",
+        "The image will float in the air"
+      ],
+      "correctIndex": 1,
+      "hint": "Light from the top of the tree passes through the hole to the bottom of the screen.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "p_ph2",
+      "conceptId": "pinhole",
+      "question": "Why should the inside of a pinhole camera be painted black?",
+      "options": [
+        "Black paint makes the box stronger",
+        "To prevent reflections inside the box that would blur the image",
+        "Black is the traditional colour for cameras",
+        "To make the pinhole appear bigger"
+      ],
+      "correctIndex": 1,
+      "hint": "Think about what happens to light when it reflects off white or shiny surfaces inside.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "p_ph3",
+      "conceptId": "pinhole",
+      "question": "Sunita notices that when she moves her pinhole camera closer to the object, the image becomes larger. This proves that:",
+      "options": [
+        "Closer objects appear smaller in pinhole cameras",
+        "The size of the image depends on distance from the object",
+        "Pinhole cameras only work from far away",
+        "The hole gets bigger when closer"
+      ],
+      "correctIndex": 1,
+      "hint": "The angle of rays entering the hole changes with distance.",
+      "difficulty": "medium"
+    }
+  ],
+  "reflection": [
+    {
+      "id": "p_r1",
+      "conceptId": "reflection",
+      "question": "Vikram looks at a rough brick wall. He cannot see his reflection. Why?",
+      "options": [
+        "Walls absorb all light",
+        "Walls don't reflect light at all",
+        "Rough surfaces cause irregular/diffuse reflection — no clear image forms",
+        "Vikram's eyes are not working properly"
+      ],
+      "correctIndex": 2,
+      "hint": "Smooth vs rough surfaces reflect light very differently.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "p_r2",
+      "conceptId": "reflection",
+      "question": "A solar cooker uses curved mirrors to cook food. How does this work?",
+      "options": [
+        "Mirrors generate heat on their own",
+        "Curved mirrors reflect sunlight and focus it onto a small area, creating heat",
+        "Mirrors absorb sunlight and become hot",
+        "Mirrors filter out cold light rays"
+      ],
+      "correctIndex": 1,
+      "hint": "Reflection can be directed — think about where reflected rays would go with a curved mirror.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "p_r3",
+      "conceptId": "reflection",
+      "question": "Aman writes the word 'AMBULANCE' backwards on the front of a vehicle. Why?",
+      "options": [
+        "It is a mistake",
+        "So it looks correct in the rear-view mirror of vehicles ahead",
+        "Backwards writing is easier to read",
+        "To confuse people"
+      ],
+      "correctIndex": 1,
+      "hint": "A mirror reverses writing — so reversed writing looks normal in a mirror.",
+      "difficulty": "easy"
+    }
+  ],
+  "day_night": [
+    {
+      "id": "p_dn1",
+      "conceptId": "day_night",
+      "question": "If Earth did NOT rotate on its axis, what would happen?",
+      "options": [
+        "We would have longer days only",
+        "One side of Earth would always be in daylight and the other always in darkness",
+        "Day and night would alternate faster",
+        "The sun would rise in the West"
+      ],
+      "correctIndex": 1,
+      "hint": "Day and night happen BECAUSE Earth rotates.",
+      "difficulty": "hard"
+    },
+    {
+      "id": "p_dn2",
+      "conceptId": "day_night",
+      "question": "Why does the Sun appear to rise in the East every morning?",
+      "options": [
+        "The Sun moves from East to West",
+        "Earth rotates from West to East, making the Sun appear to move East to West",
+        "The Sun is fixed and Earth is also fixed",
+        "The Moon pushes the Sun upward"
+      ],
+      "correctIndex": 1,
+      "hint": "Remember — the Sun doesn't actually move. It's Earth that moves.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "p_dn3",
+      "conceptId": "day_night",
+      "question": "Deepa is in Delhi. Her pen pal Lily is in London. It is 2 PM in Delhi. Will it be daytime or nighttime in London?",
+      "options": [
+        "It will be 2 PM in London too",
+        "It will be nighttime in London",
+        "It will be early morning in London (about 8:30 AM)",
+        "London and Delhi always have the same time"
+      ],
+      "correctIndex": 2,
+      "hint": "London is west of Delhi — about 5.5 hours behind Indian Standard Time.",
+      "difficulty": "medium"
+    }
+  ]
+}
