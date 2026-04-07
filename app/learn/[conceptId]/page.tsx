@@ -199,7 +199,7 @@ export default function LearnPage() {
   const clearChat = () => {
     const starter: ChatMessage = {
       role: "assistant",
-      content: `Chat cleared. I'm ready to help you again with ${concept.name}.`,
+      content: `Chat cleared. I'm ready to help you again with ${concept?.name || "this concept"}.`,
       createdAt: Date.now(),
     };
     setChatMessages([starter]);
