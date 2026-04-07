@@ -26,7 +26,7 @@ const QUICK_ASKS = [
   "Explain it simply",
 ];
 
-type ChatMessage = { role: "user" | "assistant"; content: string };
+type ChatMessage = { role: "user" | "assistant"; content: string; createdAt: number };
 
 function plainLessonText(lesson: { title: string; content: string }): string {
   const body = lesson.content.replace(/\*\*/g, "").replace(/\s+/g, " ").trim();
@@ -56,6 +56,7 @@ export default function LearnPage() {
   const [lessonSpeaking, setLessonSpeaking] = useState(false);
   const aiInputRef = useRef<HTMLInputElement>(null);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const chatStorageKey = studentName && conceptId ? `chat:${studentName.toLowerCase().trim()}:${conceptId}` : "";
 
   useEffect(() => {
     setMounted(true);
@@ -73,6 +74,41 @@ export default function LearnPage() {
     if (typeof window !== "undefined") window.speechSynthesis?.cancel();
     setLessonSpeaking(false);
   }, [conceptId]);
+
+  useEffect(() => {
+    if (!chatStorageKey || typeof window === "undefined") return;
+    const saved = window.localStorage.getItem(chatStorageKey);
+    if (!saved) {
+      setChatMessages([
+        {
+          role: "assistant",
+          content: `Hi ${studentName.split(" ")[0]}! I'm your tutor for ${concept?.name || "this concept"}. Ask me anything and I'll help step by step.`,
+          createdAt: Date.now(),
+        },
+      ]);
+      return;
+    }
+    try {
+      const parsed = JSON.parse(saved) as ChatMessage[];
+      const valid = Array.isArray(parsed)
+        ? parsed.filter(
+            (m) =>
+              m &&
+              (m.role === "user" || m.role === "assistant") &&
+              typeof m.content === "string" &&
+              typeof m.createdAt === "number"
+          )
+        : [];
+      setChatMessages(valid.slice(-40));
+    } catch {
+      setChatMessages([]);
+    }
+  }, [chatStorageKey, concept?.name, studentName]);
+
+  useEffect(() => {
+    if (!chatStorageKey || typeof window === "undefined") return;
+    window.localStorage.setItem(chatStorageKey, JSON.stringify(chatMessages.slice(-40)));
+  }, [chatMessages, chatStorageKey]);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -133,7 +169,7 @@ export default function LearnPage() {
     const trimmed = query.trim();
     if (!trimmed || aiLoading) return;
     const historyBefore = chatMessages;
-    setChatMessages((m) => [...m, { role: "user", content: trimmed }]);
+    setChatMessages((m) => [...m, { role: "user", content: trimmed, createdAt: Date.now() }]);
     setAiQuery("");
     setAiLoading(true);
     try {
@@ -149,15 +185,24 @@ export default function LearnPage() {
       });
       const data = await res.json();
       const reply = data.response || "I'm having trouble right now. Try again!";
-      setChatMessages((m) => [...m, { role: "assistant", content: reply }]);
+      setChatMessages((m) => [...m, { role: "assistant", content: reply, createdAt: Date.now() }]);
     } catch {
       setChatMessages((m) => [
         ...m,
-        { role: "assistant", content: "Oops! Something went wrong. Please try again." },
+        { role: "assistant", content: "Oops! Something went wrong. Please try again.", createdAt: Date.now() },
       ]);
     } finally {
       setAiLoading(false);
     }
+  };
+
+  const clearChat = () => {
+    const starter: ChatMessage = {
+      role: "assistant",
+      content: `Chat cleared. I'm ready to help you again with ${concept.name}.`,
+      createdAt: Date.now(),
+    };
+    setChatMessages([starter]);
   };
 
   if (!mounted || !concept || !lesson) {
@@ -494,9 +539,19 @@ export default function LearnPage() {
                 maxHeight: "min(52vh, 420px)",
               }}
             >
-              <p className="text-xs font-semibold px-2 pt-1 pb-2" style={{ color: "#9E9EB0" }}>
-                Conversation
-              </p>
+              <div className="flex items-center justify-between px-2 pt-1 pb-2">
+                <p className="text-xs font-semibold" style={{ color: "#9E9EB0" }}>
+                  Conversation
+                </p>
+                <button
+                  type="button"
+                  onClick={clearChat}
+                  className="text-[11px] font-semibold px-2 py-1 rounded-lg"
+                  style={{ color: "#7B1FA2", background: "#F3E5F5", border: "1px solid #E1BEE7" }}
+                >
+                  Clear
+                </button>
+              </div>
               <div className="overflow-y-auto px-1 pb-2 space-y-3 flex-1" style={{ WebkitOverflowScrolling: "touch" }}>
                 {chatMessages.length === 0 && !aiLoading && (
                   <div className="rounded-2xl p-4 text-center" style={{ background: "#F3E5F5", border: "1px dashed #CE93D8" }}>
@@ -513,6 +568,9 @@ export default function LearnPage() {
                         style={{ background: "#1A237E", color: "white" }}
                       >
                         <p className="text-sm leading-relaxed whitespace-pre-wrap break-words">{msg.content}</p>
+                        <p className="text-[10px] mt-1 opacity-75">
+                          {new Date(msg.createdAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                        </p>
                       </div>
                     </div>
                   ) : (
@@ -529,6 +587,9 @@ export default function LearnPage() {
                         </div>
                         <p className="text-sm leading-relaxed whitespace-pre-wrap break-words" style={{ color: "#1A1A2E" }}>
                           {msg.content}
+                        </p>
+                        <p className="text-[10px] mt-1" style={{ color: "#9E9EB0" }}>
+                          {new Date(msg.createdAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
                         </p>
                       </div>
                     </div>
